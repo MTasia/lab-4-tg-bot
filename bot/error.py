@@ -1,12 +1,14 @@
 import time
 import re
 
+
 def date_valid(date):
     try:
         valid_date = time.strptime(date, '%Y-%m-%d')
         return True
     except ValueError:
         return False
+
 
 def number_group_valid(number):
     try:

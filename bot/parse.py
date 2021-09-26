@@ -1,11 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
-import datetime
 from datetime import date
-import error
+from bot import error
 
-#in: date(YYYY-MM-DD), dir id, group id
-#out: list with shedule
+
 def get_data(date_entry, id_dir=99, id_group=30687):
     if not error.date_valid(date_entry):
         return []
@@ -26,6 +24,3 @@ def get_data(date_entry, id_dir=99, id_group=30687):
         d =(TimeAndLesson1,Teacher, Place)
         list.append(d)
     return list
-       
-
-#print(get_data(input(' YYYY-MM-DD ')))
